@@ -1,0 +1,20 @@
+.header {
+    height: 48px;
+    border-bottom: 1px solid #e7e8ec;
+}
+
+.nav {
+    width: 1100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.nav li {
+    font-size: 18px;
+}
+
+.nav li:not(:last-child) {
+    margin-right: 20px;
+}
