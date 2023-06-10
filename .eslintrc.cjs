@@ -10,5 +10,9 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    "semi": "warn",
+    "quotes": ["error", "double"],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "prefer-arrow-callback": "error"
   },
 }
