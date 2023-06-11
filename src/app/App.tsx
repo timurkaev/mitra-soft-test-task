@@ -1,5 +1,6 @@
 import type { FC, ReactElement } from "react";
 import "./styles/index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Suspense } from "react";
 import { AppRouter } from "./providers/router";
 import { BrowserRouter } from "react-router-dom";
@@ -11,7 +12,9 @@ export const App: FC = (): ReactElement => {
       <BrowserRouter>
         <Suspense fallback="">
           <Header />
-          <AppRouter />
+          <main className="main">
+            <AppRouter />
+          </main>
         </Suspense>
       </BrowserRouter>
     </div>
