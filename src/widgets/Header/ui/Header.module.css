@@ -8,12 +8,25 @@
 
 .container {
     width: 1100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .container svg {
     cursor: pointer;
+    fill: var(--txt-color);
 }
 
+.title {
+    font-size: 20px;
+    color: #570df8;
+    font-weight: 600;
+}
+
+.title span {
+   color: var(--txt-color)
+}
 
 .nav li {
     font-size: 18px;

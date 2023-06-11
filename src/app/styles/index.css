@@ -1,5 +1,13 @@
 @import "normalize.css";
 @import "vars.css";
+@import "themes/light.css";
+@import "themes/dark.css";
+
+.app {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    min-height: 100vh;
+}
 
 .main {
     width: 1100px;
