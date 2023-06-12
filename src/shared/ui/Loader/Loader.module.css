@@ -1,0 +1,22 @@
+.loading {
+    height: 300px;
+    border-radius: 10px;
+    opacity: .5;
+    background: var(--loader);
+    background-size: 200% 100%;
+    animation: 1s shine linear infinite;
+}
+
+.loading:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+.isNoneList {
+    height: 600px;
+}

@@ -1,4 +1,4 @@
-export interface INewsDto {
+export interface IPostsDto {
   userId: number;
   id: number;
   title: string;

@@ -4,6 +4,8 @@
 
     --txt-color: #ffffff;
 
+    --loader: linear-gradient(110deg, #10171E 8%, #15202B 18%, #10171E 33%);
+
     --primary-color: #049604;
     --secondary-color: #04ff04;
     --inverted-primary-color: #0232c2;
