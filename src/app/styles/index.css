@@ -7,9 +7,17 @@
     background-color: var(--bg-color);
     color: var(--txt-color);
     min-height: 100vh;
+    transition: background-color, color .4s;
 }
 
 .main {
     width: 1100px;
     margin: auto;
+}
+
+.offcanvas {
+    transition: .2s;
+}
+
+.offcanvas.show {
 }

@@ -16,19 +16,33 @@
 .container svg {
     cursor: pointer;
     fill: var(--txt-color);
+    margin-right: 10px;
+    transition: .1s;
+}
+
+.container svg:hover {
+    transform: scale(1.1);
+}
+
+.container svg:active {
+    transform: scale(1);
 }
 
 .title {
     font-size: 20px;
     color: #570df8;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .title span {
    color: var(--txt-color)
 }
 
-.nav li {
+.off {
+    color: var(--txt-color)
+}
+
+.nav li a {
     font-size: 18px;
 }
 

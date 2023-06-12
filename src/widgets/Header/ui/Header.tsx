@@ -8,10 +8,10 @@ import { useTheme } from "../../../app/providers/ThemeProvider/lib/useTheme";
 
 export const Header: FC = (): ReactElement => {
   const [show, setShow] = useState<boolean>(false);
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => setShow(!show);
 
   return (
     <header className={styles.header}>
@@ -21,9 +21,24 @@ export const Header: FC = (): ReactElement => {
           mitra<span>SOFT</span>
         </span>
       </div>
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Pages</Offcanvas.Title>
+      <Offcanvas
+        style={{
+          backgroundColor: theme === "dark" ? "#1d232a" : "#ffffff",
+          borderRight: "1px solid #e7e8ec",
+        }}
+        backdrop={false}
+        show={show}
+        onHide={handleClose}
+      >
+        <Offcanvas.Header
+          closeButton
+          closeVariant={theme === "dark" ? "white" : "black"}
+        >
+          <Offcanvas.Title
+            style={{ color: theme === "light" ? "#1d232a" : "#ffffff" }}
+          >
+            Pages
+          </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className={styles.nav}>
@@ -34,8 +49,16 @@ export const Header: FC = (): ReactElement => {
               <Link to="/about">Обо мне</Link>
             </li>
             <li>
-              <Button onClick={toggleTheme} variant={"primary"}>
-                toggleTheme
+              <Button
+                style={{
+                  backgroundColor: theme === "dark" ? "#ffffff" : "#1d232a",
+                  color: theme === "dark" ? "#000000" : "#ffffff",
+                  border: "none",
+                }}
+                onClick={toggleTheme}
+                variant={"primary"}
+              >
+                {theme === "light" ? "Dark Mode" : "Light Mode"}
               </Button>
             </li>
           </ul>
