@@ -1,9 +1,6 @@
 import { combineReducers } from "redux";
-
-const test = (state = {}, action) => {
-  return state;
-};
+import { postsReducer } from "./posts/postsReducer";
 
 export const reducers = combineReducers({
-  test,
+  postsReducer,
 });
