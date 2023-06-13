@@ -1,14 +1,13 @@
 import type { FC } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getPosts } from "../../../app/store/actions/posts/posts.action";
-import type { RootState } from "../../../app/store";
 import { useEffect } from "react";
 import { Loader } from "../../../shared/ui/Loader/Loader";
+import { useTypedSelector } from "../../../shared/hooks/useTypedSelector";
+import type { IPostsDto } from "../../../shared/api/postsApi/posts.dto";
 
 const MainPage: FC = () => {
-  const { posts, isLoading } = useSelector(
-    (store: RootState) => store.postsReducer
-  );
+  const { posts, isLoading } = useTypedSelector((state) => state.posts);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,10 +22,10 @@ const MainPage: FC = () => {
   return (
     <div>
       <ul>
-        {!isLoading ? (
+        {isLoading ? (
           <Loader isList={true} />
         ) : (
-          posts.map((el) => <li key={el.id}>{el.title}</li>)
+          posts.map((el: IPostsDto) => <li key={el.id}>{el.title}</li>)
         )}
       </ul>
     </div>

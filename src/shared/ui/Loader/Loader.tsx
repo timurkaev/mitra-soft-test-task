@@ -2,7 +2,7 @@ import type { ReactElement, FC } from "react";
 import styles from "./Loader.module.css";
 
 interface ILoaderProps {
-  isList: boolean;
+  isList?: boolean;
 }
 
 export const Loader: FC<ILoaderProps> = ({ isList = false }): ReactElement => {
