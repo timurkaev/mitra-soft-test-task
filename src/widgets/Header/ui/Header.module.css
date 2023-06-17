@@ -1,52 +1,52 @@
 .header {
-    height: 48px;
-    border-bottom: 1px solid #e7e8ec;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+  height: 48px;
+  border-bottom: 1px solid #e7e8ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .container {
-    width: 1100px;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .container svg {
-    cursor: pointer;
-    fill: var(--txt-color);
-    margin-right: 10px;
-    transition: .1s;
+  cursor: pointer;
+  fill: var(--txt-color);
+  margin-right: 10px;
+  transition: 0.1s;
 }
 
 .container svg:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .container svg:active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .title {
-    font-size: 20px;
-    color: #570df8;
-    font-weight: 700;
+  font-size: 20px;
+  color: #570df8;
+  font-weight: 700;
 }
 
 .title span {
-   color: var(--txt-color)
+  color: var(--txt-color);
 }
 
 .off {
-    color: var(--txt-color)
+  color: var(--txt-color);
 }
 
 .nav li a {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .nav li:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }

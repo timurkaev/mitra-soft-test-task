@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Suspense } from "react";
 import { AppRouter } from "./providers/router";
 import { BrowserRouter } from "react-router-dom";
-import { Header } from "../widgets/Header/ui/Header";
 import { useTheme } from "./providers/ThemeProvider/lib/useTheme";
+import { Header } from "../widgets/Header";
 
 export const App: FC = (): ReactElement => {
   const { theme } = useTheme();

@@ -1,0 +1,29 @@
+.listItem {
+  margin-top: 20px;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 16px;
+  padding: 40px 60px;
+}
+
+.postTitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 20px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 29px;
+}
+
+.userInfo span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 10px;
+}

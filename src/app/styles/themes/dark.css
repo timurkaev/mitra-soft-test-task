@@ -1,13 +1,15 @@
 .app.dark {
-    --bg-color: #1d232a;
-    --inverted-bg-color: #ffffff;
+  --bg-color: #1d232a;
+  --inverted-bg-color: #ffffff;
 
-    --txt-color: #ffffff;
+  --txt-color: #ffffff;
+  --shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  --avatar: #25384a;
 
-    --loader: linear-gradient(110deg, #10171E 8%, #15202B 18%, #10171E 33%);
+  --loader: linear-gradient(110deg, #10171e 8%, #15202b 18%, #10171e 33%);
 
-    --primary-color: #049604;
-    --secondary-color: #04ff04;
-    --inverted-primary-color: #0232c2;
-    --inverted-secondary-color: #0051ff;
+  --primary-color: #049604;
+  --secondary-color: #04ff04;
+  --inverted-primary-color: #0232c2;
+  --inverted-secondary-color: #0051ff;
 }

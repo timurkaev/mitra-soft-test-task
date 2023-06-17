@@ -1,4 +1,4 @@
-import type { ReactElement, FC } from "react";
+import { type ReactElement, type FC, Fragment } from "react";
 import styles from "./Loader.module.css";
 
 interface ILoaderProps {
@@ -11,7 +11,7 @@ export const Loader: FC<ILoaderProps> = ({ isList = false }): ReactElement => {
       {isList ? (
         new Array(10)
           .fill(<div className={`${styles.loading} isNoneList`} />)
-          .map((el) => el)
+          .map((el, i) => <Fragment key={i}>{el}</Fragment>)
       ) : (
         <div className={styles.loading} />
       )}

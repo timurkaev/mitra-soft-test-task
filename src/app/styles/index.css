@@ -4,20 +4,12 @@
 @import "themes/dark.css";
 
 .app {
-    background-color: var(--bg-color);
-    color: var(--txt-color);
-    min-height: 100vh;
-    transition: background-color, color .4s;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  min-height: 100vh;
 }
 
 .main {
-    width: 1100px;
-    margin: auto;
-}
-
-.offcanvas {
-    transition: .2s;
-}
-
-.offcanvas.show {
+  width: 1100px;
+  margin: auto;
 }

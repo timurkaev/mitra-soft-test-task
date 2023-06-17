@@ -1,15 +1,15 @@
-import { GET_POSTS, POSTS_LOADER, SET_POSTS } from "../../constants";
 import type { IPostsDto } from "../../../../shared/api/postsApi/posts.dto";
+import { PostsActionTypes } from "../../reducers/posts/types";
 
 export const postsLoader = () => ({
-  type: POSTS_LOADER,
+  type: PostsActionTypes.POSTS_LOADER,
 });
 
 export const getPosts = () => ({
-  type: GET_POSTS,
+  type: PostsActionTypes.GET_POSTS,
 });
 
 export const setPosts = (payload: IPostsDto[]) => ({
-  type: SET_POSTS,
+  type: PostsActionTypes.SET_POSTS,
   payload,
 });

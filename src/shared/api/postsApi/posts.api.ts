@@ -3,7 +3,7 @@ import type { IPostsDto } from "./posts.dto";
 import type { AxiosResponse } from "axios";
 
 export class PostsApi {
-  static async getPosts(limit = 10, page = 1): Promise<IPostsDto[] | void> {
+  static async getPosts(limit = 100, page = 1): Promise<IPostsDto[] | void> {
     const response = await instance
       .get("/posts", {
         params: {

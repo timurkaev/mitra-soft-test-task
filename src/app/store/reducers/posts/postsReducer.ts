@@ -1,22 +1,25 @@
-import { POSTS_LOADER, SET_POSTS } from "../../constants";
+import type { IState } from "./types";
+import { PostsActionTypes, type PostsAction } from "./types";
 
-const initialState = {
+const initialState: IState = {
   posts: [],
   isLoading: false,
+  page: 0,
+  limit: 10,
 };
 
-export const postsReducer = (state = initialState, { type, payload }) => {
-  switch (type) {
-    case POSTS_LOADER:
+export const postsReducer = (state = initialState, action: PostsAction) => {
+  switch (action.type) {
+    case PostsActionTypes.POSTS_LOADER:
       return {
         ...state,
         isLoading: true,
       };
 
-    case SET_POSTS:
+    case PostsActionTypes.SET_POSTS:
       return {
         ...state,
-        posts: payload,
+        posts: action.payload,
         isLoading: false,
       };
     default:

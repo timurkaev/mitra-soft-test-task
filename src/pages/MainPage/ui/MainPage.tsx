@@ -2,32 +2,34 @@ import type { FC } from "react";
 import { useDispatch } from "react-redux";
 import { getPosts } from "../../../app/store/actions/posts/posts.action";
 import { useEffect } from "react";
-import { Loader } from "../../../shared/ui/Loader/Loader";
+import { PostsList } from "../../../widgets/PostsList";
+import { getUsers } from "../../../app/store/actions/users/users.action";
 import { useTypedSelector } from "../../../shared/hooks/useTypedSelector";
-import type { IPostsDto } from "../../../shared/api/postsApi/posts.dto";
 
 const MainPage: FC = () => {
-  const { posts, isLoading } = useTypedSelector((state) => state.posts);
   const dispatch = useDispatch();
 
+  const { users } = useTypedSelector((state) => state.users);
+
   useEffect(() => {
-    const handleIncrease = () => {
+    const fetchPosts = (): void => {
       dispatch(getPosts());
     };
-    handleIncrease();
+    fetchPosts();
   }, []);
 
-  console.log(isLoading);
+  useEffect(() => {
+    const fetchUsers = (): void => {
+      dispatch(getUsers());
+    };
+    fetchUsers();
+  }, []);
+
+  console.log(users);
 
   return (
     <div>
-      <ul>
-        {isLoading ? (
-          <Loader isList={true} />
-        ) : (
-          posts.map((el: IPostsDto) => <li key={el.id}>{el.title}</li>)
-        )}
-      </ul>
+      <PostsList />
     </div>
   );
 };
